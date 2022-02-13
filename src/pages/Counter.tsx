@@ -1,7 +1,32 @@
+import { useState } from "react";
+
 export default function Expenses() {
+
+  let [count, setCount] = useState(0);
+
+  let increaseValue = () => {
+    setCount(count + 1)
+  }
+  let decreaseValue = () => {
+    setCount(count - 1)
+  }
+
   return (
-    <main style={{ padding: "1rem 0" }}>
-      <h2>Counter</h2>
+    <main className="container pt-5">
+      <h1>Counter</h1>
+      <div>
+        {count}
+      </div>
+      <button
+        onClick={increaseValue}
+      >
+        Increment
+      </button>
+      <button
+        onClick={decreaseValue}
+      >
+        Decrement
+      </button>
     </main>
   );
 }
