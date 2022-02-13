@@ -1,11 +1,24 @@
+import './MyButton.css';
+import React from "react";
+
 type Props = {
-  children: JSX.Element,
+  children?: React.ReactNode;
+  className?: String,
+  onClick: () => void;
 }
-export default function MyButton({ children }: Props) {
+const MyButton: React.FC<Props> = ({
+                                     children,
+                                     onClick,
+                                     className,
+                                   }) => {
   return (
     <button
+      className={`MyButton ${className}`}
+      onClick={onClick}
     >
       {children}
     </button>
   );
 }
+
+export default MyButton;

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import MyButton from "../components/MyButton";
 
 export default function Expenses() {
 
@@ -17,16 +18,17 @@ export default function Expenses() {
       <div>
         {count}
       </div>
-      <button
+      <MyButton
+        className="mr-4"
         onClick={increaseValue}
       >
         Increment
-      </button>
-      <button
+      </MyButton>
+      <MyButton
         onClick={decreaseValue}
       >
         Decrement
-      </button>
+      </MyButton>
     </main>
   );
 }
