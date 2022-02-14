@@ -6,7 +6,7 @@ import { Link, Outlet } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <header className="container">
+      <header className="container border-b border-gray-400">
         <div
           className="flex items-center justify-between"
         >
